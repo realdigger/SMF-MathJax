@@ -12,6 +12,7 @@ if (!defined('SMF')) {
     die('Hacking attempt...');
 }
 
+
 /**
  * Load all needed hooks
  */
@@ -22,6 +23,7 @@ function loadMathJaxHooks()
     add_integration_function('integrate_bbc_codes', 'addMathJaxBbcCode', false);
     add_integration_function('integrate_menu_buttons', 'addMathJaxCopyright', false);
 }
+
 
 /**
  * Load JS libraries
@@ -55,7 +57,7 @@ function addMathJaxBbcButton(&$buttons)
         'code' => 'latex_inline',
         'before' => '[latex=inline]',
         'after' => '[/latex]',
-        'description' => 'LaTex',
+        'description' => 'LaTex inline',
     );
 }
 
