@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	This is a simplified package manifest for SMF packages.
+
+	ATTENTION: If you are trying to install this manually, you should try
+	the package manager.  If it will not work for you, please take a look
+	at the following for information on this format:
+		http://mods.simplemachines.org/docs/manual-install.php
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<package-info xmlns="http://www.simplemachines.org/xml/package-info">
+    <id>digger:mathjax</id>
+    <name>MathJax</name>
+    <version>1.3</version>
+    <type>modification</type>
+
+    <install for="2.0 - 2.0.99">
+        <readme parsebbc="true">readme.txt</readme>
+        <require-dir name="Sources" destination="$boarddir"/>
+        <require-dir name="Themes" destination="$boarddir"/>
+        <code>hooks.php</code>
+    </install>
+
+    <uninstall for="2.0 - 2.0.99">
+        <remove-file name="$sourcedir/Mod-Mathjax.php"/>
+        <remove-file name="$imagesdir/bbc/latex.gif"/>
+        <remove-file name="$imagesdir/bbc/latex_inline.gif"/>
+        <code>hooks.php</code>
+    </uninstall>
+
+</package-info>
