@@ -23,7 +23,7 @@
     </install>
 
     <uninstall for="2.0 - 2.0.99">
-        <remove-file name="$sourcedir/Mod-Mathjax.php"/>
+        <remove-file name="$sourcedir/Mod-MathJax.php"/>
         <remove-file name="$imagesdir/bbc/latex.gif"/>
         <remove-file name="$imagesdir/bbc/latex_inline.gif"/>
         <code>hooks.php</code>
