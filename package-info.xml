@@ -12,13 +12,16 @@
 <package-info xmlns="http://www.simplemachines.org/xml/package-info">
     <id>digger:mathjax</id>
     <name>MathJax</name>
-    <version>1.3</version>
+    <version>1.4</version>
     <type>modification</type>
 
     <install for="2.0 - 2.0.99">
-        <readme parsebbc="true">readme.txt</readme>
+        <readme parsebbc="true">readme/english.txt</readme>
+        <readme parsebbc="true" lang="russian">readme/russian.txt</readme>
+        <readme parsebbc="true" lang="russian-utf8">readme/russian-utf8.txt</readme>
         <require-dir name="Sources" destination="$boarddir"/>
-        <require-dir name="Themes" destination="$boarddir"/>
+        <require-dir name="Themes-2.0/default" destination="$boarddir/Themes"/>
+        <modification>modification.xml</modification>
         <code>hooks.php</code>
     </install>
 
@@ -26,6 +29,25 @@
         <remove-file name="$sourcedir/Mod-MathJax.php"/>
         <remove-file name="$imagesdir/bbc/latex.gif"/>
         <remove-file name="$imagesdir/bbc/latex_inline.gif"/>
+        <modification reverse="true">modification.xml</modification>
+        <code>hooks.php</code>
+    </uninstall>
+
+    <install for="2.1 Beta 2, 2.1 - 2.1.99">
+        <readme parsebbc="true">readme/english.txt</readme>
+        <readme parsebbc="true" lang="russian">readme/russian.txt</readme>
+        <readme parsebbc="true" lang="russian-utf8">readme/russian-utf8.txt</readme>
+        <require-dir name="Sources" destination="$boarddir"/>
+        <require-dir name="Themes-2.1/default" destination="$boarddir/Themes"/>
+        <modification>modification.xml</modification>
+        <code>hooks.php</code>
+    </install>
+
+    <uninstall for="2.1 Beta 2, 2.1 - 2.1.99">
+        <remove-file name="$sourcedir/Mod-MathJax.php"/>
+        <remove-file name="$imagesdir/bbc/latex.png"/>
+        <remove-file name="$imagesdir/bbc/latex_inline.png"/>
+        <modification reverse="true">modification.xml</modification>
         <code>hooks.php</code>
     </uninstall>
 

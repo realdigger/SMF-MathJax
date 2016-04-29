@@ -2,10 +2,10 @@
 /**
  * @package SMF MathJax Mod
  * @author digger
- * @copyright 2011—2015
+ * @copyright 2011—2016
  * @license GPLv3
  * @file Mod-MathJax.php
- * @version 1.3
+ * @version 1.4
  */
 
 if (!defined('SMF')) {
@@ -30,10 +30,12 @@ function loadMathJaxHooks()
  */
 function loadMathJaxJs()
 {
-    global $context;
+    global $context, $txt;
+
+    //$txt['shortcuts_firefox'] .= '';
 
     $context['insert_after_template'] .= '
-      <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>';
+      <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=default,Safe"></script>';
 }
 
 
@@ -89,6 +91,6 @@ function addMathjaxCopyright()
     global $context;
 
     if ($context['current_action'] == 'credits') {
-        $context['copyrights']['mods'][] = '<a href="http://mysmf.ru/mods/mathjax" title="SMF MathJax Mod" target="_blank">MathJax for SMF</a> &copy; 2011—2015, digger | <a href="http://www.mathjax.org" title="Powered by MathJax" target="_blank">Powered by MathJax</a>';
+        $context['copyrights']['mods'][] = '<a href="http://mysmf.ru/mods/mathjax" title="SMF MathJax Mod" target="_blank">MathJax for SMF</a> &copy; 2011—2016, digger | <a href="http://www.mathjax.org" title="Powered by MathJax" target="_blank">Powered by MathJax</a>';
     }
 }

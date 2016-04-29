@@ -2,10 +2,10 @@
 /**
  * @package SMF MathJax Mod
  * @author digger
- * @copyright 2011—2015
+ * @copyright 2011—2016
  * @license GPLv3
  * @file hooks.php
- * @version 1.3
+ * @version 1.4
  *
  * To run this install manually please make sure you place this
  * in the same place and SSI.php and index.php

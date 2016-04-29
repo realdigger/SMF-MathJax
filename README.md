@@ -1,7 +1,7 @@
 # SMF MathJax mod
 * **Author:** digger http://mysmf.ru
 * **License:** GPLv3
-* **Compatible with:** SMF 2.0
+* **Compatible with:** SMF 2.0, SMF 2.1
 
 ## Description
 This mod integrates the MathJax library into SMF forum. MathJax is the modern JavaScript-based LaTeX rendering solution for the Internet.  Mod uses the MathJax CDN. The CDN will automatically arrange for your readers to download MathJax files from a fast, nearby server. And since bug fixes and patches are deployed to the CDN as soon as they become available, your pages will always be up to date with the latest browser and devices.
