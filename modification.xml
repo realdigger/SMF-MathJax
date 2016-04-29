@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification">
+
+    <id>digger:mathjax</id>
+    <name>MathJax</name>
+    <version>1.4</version>
+    <type>modification</type>
+
+    <file name="$themedir/Post.template.php">
+        <operation>
+            <search position="after"><![CDATA[				if (typeof(smf_codeFix) != \'undefined\')]]></search>
+            <add><![CDATA[
+				var math = document.getElementById(\'preview_body\');
+				MathJax.Hub.Queue([\'Typeset\', MathJax.Hub, math]);
+
+]]></add>
+        </operation>
+    </file>
+
+</modification>
