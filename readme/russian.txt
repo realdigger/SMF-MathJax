@@ -3,3 +3,5 @@
 Ётот мод интегрирует библиотеку MathJax в SMF. MathJax это современное решение дл€ рендеринга формул LaTeXis посредством JS в браузерах. ћод загружает библиотеку из официальной CDN разработчиков, так что у вас всегда будет сама€ актуальна€ верси€ с последними обновлени€ми и исправлени€ми.
 [url=https://www.mathjax.org]ќфициальный сайт MathJax[/url]
 [url=https://github.com/realdigger/SMF-MathJax-Mod]—траница разработчиков мода[/url]
+
+[img]https://user-images.githubusercontent.com/1187218/33282315-b1664a42-d3c1-11e7-8778-740ba18f45be.png[/img]

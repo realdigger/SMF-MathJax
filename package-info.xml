@@ -12,7 +12,7 @@
 <package-info xmlns="http://www.simplemachines.org/xml/package-info">
     <id>digger:mathjax</id>
     <name>MathJax</name>
-    <version>1.4</version>
+    <version>1.4.1</version>
     <type>modification</type>
 
     <install for="2.0 - 2.0.99">

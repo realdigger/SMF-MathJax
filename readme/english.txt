@@ -17,3 +17,5 @@ Copy and paste math. Let readers copy equations from your web pages into Word an
 A rich API. Allows developers to create interactive course materials, advanced authoring tools, and math-enabled web apps. Learn how more about programming with MathJax.
 
 Accessible math. MathJax is compatible with screenreaders used by people with vision disabilities, and the Zoom feature allows all readers to see small details like scripts, primes and hats. See how to make your math accessible.
+
+[img]https://user-images.githubusercontent.com/1187218/33282315-b1664a42-d3c1-11e7-8778-740ba18f45be.png[/img]
