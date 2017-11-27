@@ -1,11 +1,11 @@
 <?php
 /**
  * @package SMF MathJax Mod
- * @author digger
- * @copyright 2011—2016
+ * @author digger <http://mysmf.net>
+ * @copyright 2011—2017
  * @license GPLv3
  * @file Mod-MathJax.php
- * @version 1.4
+ * @version 1.4.1
  */
 
 if (!defined('SMF')) {
@@ -30,12 +30,10 @@ function loadMathJaxHooks()
  */
 function loadMathJaxJs()
 {
-    global $context, $txt;
-
-    //$txt['shortcuts_firefox'] .= '';
+    global $context;
 
     $context['insert_after_template'] .= '
-      <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=default,Safe"></script>';
+      <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=default,Safe"></script>';
 }
 
 
@@ -91,6 +89,6 @@ function addMathjaxCopyright()
     global $context;
 
     if ($context['current_action'] == 'credits') {
-        $context['copyrights']['mods'][] = '<a href="http://mysmf.ru/mods/mathjax" title="SMF MathJax Mod" target="_blank">MathJax for SMF</a> &copy; 2011—2016, digger | <a href="http://www.mathjax.org" title="Powered by MathJax" target="_blank">Powered by MathJax</a>';
+        $context['copyrights']['mods'][] = '<a href="http://mysmf.net/mods/mathjax" title="SMF MathJax Mod" target="_blank">MathJax for SMF</a> &copy; 2011—2017, digger | <a href="http://www.mathjax.org" title="Powered by MathJax" target="_blank">Powered by MathJax</a>';
     }
 }
