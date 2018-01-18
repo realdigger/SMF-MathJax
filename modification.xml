@@ -4,7 +4,7 @@
 
     <id>digger:mathjax</id>
     <name>MathJax</name>
-    <version>1.4</version>
+    <version>1.4.2</version>
     <type>modification</type>
 
     <file name="$themedir/Post.template.php">
@@ -15,6 +15,16 @@
 				MathJax.Hub.Queue([\'Typeset\', MathJax.Hub, math]);
 
 ]]></add>
+        </operation>
+    </file>
+
+    <file name="$themedir/scripts/topic.js">
+        <operation>
+            <search position="before"><![CDATA[			setInnerHTML(document.getElementById('modified_' + this.sCurMessageId.substr(4)), message.getElementsByTagName('modified')[0].childNodes[0].nodeValue);]]></search>
+            <add><![CDATA[
+
+			var math = document.getElementById('msg_' + this.sCurMessageId.substr(4));
+			MathJax.Hub.Queue(['Typeset', MathJax.Hub, math]);]]></add>
         </operation>
     </file>
 
