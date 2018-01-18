@@ -4,7 +4,7 @@
 
     <id>digger:mathjax</id>
     <name>MathJax</name>
-    <version>1.4.2</version>
+    <version>1.4.3</version>
     <type>modification</type>
 
     <file name="$themedir/Post.template.php">
@@ -20,11 +20,12 @@
 
     <file name="$themedir/scripts/topic.js">
         <operation>
-            <search position="before"><![CDATA[			setInnerHTML(document.getElementById('modified_' + this.sCurMessageId.substr(4)), message.getElementsByTagName('modified')[0].childNodes[0].nodeValue);]]></search>
-            <add><![CDATA[
+            <search position="after"><![CDATA[		// Show this message as 'modified on x by y'.]]></search>
+            <add><![CDATA[		// Render MathJax for this message
+		var math = document.getElementById('msg_' + this.sCurMessageId.substr(4));
+		MathJax.Hub.Queue(['Typeset', MathJax.Hub, math]);
 
-			var math = document.getElementById('msg_' + this.sCurMessageId.substr(4));
-			MathJax.Hub.Queue(['Typeset', MathJax.Hub, math]);]]></add>
+]]></add>
         </operation>
     </file>
 
