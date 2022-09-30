@@ -33,7 +33,8 @@ function loadMathJaxJs()
     global $context;
 
     $context['insert_after_template'] .= '
-      <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML,Safe"></script>';
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>';
 }
 
 
@@ -89,6 +90,6 @@ function addMathjaxCopyright()
     global $context;
 
     if ($context['current_action'] == 'credits') {
-        $context['copyrights']['mods'][] = '<a href="http://mysmf.net/mods/mathjax" title="SMF MathJax Mod" target="_blank">MathJax for SMF</a> &copy; 2011—2018, digger | <a href="http://www.mathjax.org" title="Powered by MathJax" target="_blank">Powered by MathJax</a>';
+        $context['copyrights']['mods'][] = '<a href="http://mysmf.net/mods/mathjax" title="SMF MathJax Mod" target="_blank">MathJax for SMF</a> &copy; 2011—2022, digger | <a href="https://www.mathjax.org" title="Powered by MathJax" target="_blank">Powered by MathJax</a>';
     }
 }
